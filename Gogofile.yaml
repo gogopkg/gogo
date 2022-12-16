@@ -1,0 +1,24 @@
+---
+
+data:
+  path: "."
+  files: !!shell "ls {{.path}}"
+  
+env:
+  - FIRST=foo
+  - LAST=bar
+
+tasks:
+  - name:
+    deps:
+      - task:  "task_name"
+        extra:
+    data:
+    env:
+    skip: "none | duplicate | once"
+    steps:
+      - task: "task_name"
+        extra:
+      - shell:
+    range: 
+
